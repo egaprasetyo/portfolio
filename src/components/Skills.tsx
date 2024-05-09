@@ -74,14 +74,14 @@ const skillsList: skillsProps[] = [
 export default function Skills() {
   return (
     <section id="skills" className="container py-24 md:py-32">
-      <h2 className="text-3xl md:text-4xl font-bold text-center font-plus-jakarta-sans">
+      <h2 className="text-3xl md:text-4xl font-bold text-center font-plus-jakarta-sans pt-4 pb-10">
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">My</span> {" "}
         Skills
       </h2>
-      <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
+      {/* <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         Nemo commodi, quisquam sequi magnam dignissimos.
-      </h3>
+      </h3> */}
       <div className="flex flex-wrap justify-center items-center gap-5">
         {skillsList.map(({ title, description, icon }: skillsProps) => (
           <div key={title} className="max-w-[160px] md:max-w-[180px] w-full text-center">

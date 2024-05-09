@@ -27,7 +27,7 @@ const resumeList: ResumeProps[] = [
     company: "Fleetify.id",
   },
   {
-    year: "03/2020 - 05/2022",
+    year: "03/2020 - 05/2020",
     role: "Frontend Developer - Internship",
     company: "PT. Yoofix Digital Indonesia",
   },
@@ -43,21 +43,21 @@ const certificateList: CertificateProps[] = [
     title: "Core Initiative Frontend Project Based Internship Program",
     year: "12/2023 - 01/2024",
     institution: "Rakamin Academy",
-    url: "www.google.com",
+    url: "https://drive.google.com/file/d/1lujz1_NFVIcnJ7a8sEBHV-7xwBam9CZx/view?usp=sharing",
     icon: "rakamin-academy.webp"
   },
   {
     title: "Frontend Developer Course",
     year: "03/2022 - 03/2023",
     institution: "Progate",
-    url: "www.google.com",
+    url: "https://drive.google.com/file/d/1lV2OQnM2-3hok7cxl1coXJyiNhwW_8lz/view",
     icon: "progate_logo.png"
   },
   {
     title: "UI/UX Designer Bootcamp",
     year: "10/2020 - 02/2021",
     institution: "Binar Academy",
-    url: "www.google.com",
+    url: "https://drive.google.com/file/d/1alC2QeaJ52ys0BAnTlSjwldqLG5iiuEg/view",
     icon: "binar_academy_logo.png"
   }
 ]
@@ -67,14 +67,14 @@ export default function Resume() {
     <section id="resume" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
-          <h2 className="font-plus-jakarta-sans text-3xl md:text-4xl font-bold">
+          <h2 className="font-plus-jakarta-sans text-3xl md:text-4xl font-bold mt-4 mb-10">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">Education &</span>{" "}
             Experience
           </h2>
 
-          <p className="text-muted-foreground mt-4 mb-8 text-xl">
+          {/* <p className="text-muted-foreground mt-4 mb-8 text-xl">
             I enjoy creating simple, beautiful, and intuitive designs to effectively communicate your message and identity.
-          </p>
+          </p> */}
 
           <div className="">
             {resumeList.map(({ year, role, company, descriptions }: ResumeProps, index: number) => (
@@ -110,17 +110,28 @@ function ResumeItem({ year, role, company, descriptions, index }: ResumeProps & 
 function CertificateItem({ title, institution, year, icon, url }: CertificateProps) {
   return (
     <div className='bg-muted/50 border rounded-lg py-8 px-4 md:px-6'>
-      <div className="space-y-1 flex flex-col md:flex-row justify-start items-center gap-4">
+      <div className="space-y-1 flex flex-col md:flex-row justify-start items-center gap-6">
         {icon &&
           <div className="mt-1 p-1 rounded-full bg-white">
-            <Image className="object-contain w-full" src={`/${icon}`} alt={institution} width={60} height={60} />
+            <Image className="object-contain max-w-16 max-h-16" src={`/${icon}`} alt={institution} width={60} height={60} />
           </div>
         }
         <div className="text-center md:text-left">
-          <div className="text-xl flex font-plus-jakarta-sans font-extrabold">{title}</div>
+          <div className="text-xl flex font-plus-jakarta-sans font-bold">{title}</div>
           <div>
             <span className="mb-2 block text-primary font-semibold">{institution}</span>
-            <span className="text-sm">{year}</span>
+            <span className="text-sm text-muted-foreground">{year}</span>
+          </div>
+        </div>
+        <div className='md:ml-auto'>
+          <div className="w-11 h-11 leading-10 text-center bg-muted rounded-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-primary duration-300">
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href={url}
+              className="flex justify-center items-center h-full">
+              <ArrowTopRightIcon className="w-6 h-6" />
+            </a>
           </div>
         </div>
       </div>
