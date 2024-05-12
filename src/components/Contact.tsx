@@ -1,6 +1,7 @@
 import React from 'react'
 import { RiWhatsappLine } from "react-icons/ri";
 import { EnvelopeClosedIcon } from '@radix-ui/react-icons'
+import Link from 'next/link';
 
 export default function Contact() {
   return (
@@ -30,7 +31,9 @@ export default function Contact() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Whatsapp me</p>
-              <h3 className="text-lg font-bold font-plus-jakarta-sans">082158440530</h3>
+              <Link href="https://wa.me/6282158440530" target='_blank' className="text-lg font-bold font-plus-jakarta-sans underline">
+                082158440530
+              </Link>
             </div>
           </div>
         </div>

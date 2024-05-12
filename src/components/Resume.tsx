@@ -48,7 +48,7 @@ const certificateList: CertificateProps[] = [
   },
   {
     title: "Frontend Developer Course",
-    year: "03/2022 - 03/2023",
+    year: "03/2022 - 03/2022",
     institution: "Progate",
     url: "https://drive.google.com/file/d/1lV2OQnM2-3hok7cxl1coXJyiNhwW_8lz/view",
     icon: "progate_logo.png"
@@ -95,7 +95,7 @@ export default function Resume() {
 function ResumeItem({ year, role, company, descriptions, index }: ResumeProps & { index: number }) {
   return (
     <div className={`relative pl-12 pb-14 before:content-[''] before:absolute before:left-[-7px] before:top-[10px] before:w-4 before:h-4 before:bg-primary before:rounded-full before:transition duration-150 ease-in-out after:content-[''] after:bg-gray-300/15 after:w-0.5 ${index === resumeList.length - 1 ? "after:h-[calc(100%-70px)]" : "after:h-full"} after:absolute after:left-0 after:top-[10px] after:z-[-1]`}>
-      <h6 className="inline-block px-6 py-2 border border-gray-300/15 rounded-full text-sm mb-3">{year}</h6>
+      <h6 className="inline-block px-4 py-2 border border-gray-300/15 rounded-full text-xs mb-3">{year}</h6>
       <h5 className="font-plus-jakarta-sans font-semibold text-lg">{role}</h5>
       <span className="text-muted-foreground leading-tight">{company}</span>
       {descriptions?.map((description: string) => (
@@ -125,13 +125,13 @@ function CertificateItem({ title, institution, year, icon, url }: CertificatePro
         </div>
         <div className='md:ml-auto'>
           <div className="w-11 h-11 leading-10 text-center bg-muted rounded-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-primary duration-300">
-            <a
+            <Link
               rel="noreferrer noopener"
               target="_blank"
-              href={url}
+              href={`${url}`}
               className="flex justify-center items-center h-full">
               <ArrowTopRightIcon className="w-6 h-6" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import "./index.css"
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

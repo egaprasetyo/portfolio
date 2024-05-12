@@ -60,14 +60,6 @@ export default function Hero() {
         </div>
       </div>
       <Image src="/me_crop.png" className="relative align-middle grayscale brightness-110 z-10" alt="hero" width={400} height={400} />
-      {/* <div className="text-box">
-        <div className="flex items-center">
-          <h2 className="text-7xl font-extrabold mr-2">2</h2>
-          <h6 className="text-xl font-semibold leading-tight">
-            Year of <br /> Experiences
-          </h6>
-        </div>
-      </div> */}
       <div className="shadow"></div>
     </section>
   )

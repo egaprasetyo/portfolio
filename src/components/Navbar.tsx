@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui
 import { Menu } from 'lucide-react';
 import { buttonVariants } from './ui/button';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 interface RouteProps {
   href: string,
@@ -50,8 +51,12 @@ export default function Navbar() {
       <NavigationMenu className='mx-auto'>
         <NavigationMenuList className='container h-20 px-4 w-screen flex justify-between'>
           <NavigationMenuItem className='font-bold flex'>
-            <Link href="/" className='ml-2 font-extrabold text-4xl flex'>
-              GAEGA
+            <Link href="/" className='ml-2 font-extrabold text-4xl flex items-center'>
+              <Avatar className='mr-3'>
+                <AvatarImage src="https://github.com/egaprasetyo.png" alt="@ega" />
+                <AvatarFallback>E</AvatarFallback>
+              </Avatar>
+              EGA
             </Link>
           </NavigationMenuItem>
 
@@ -96,7 +101,7 @@ export default function Navbar() {
               <Link
                 key={i}
                 href={router.href}
-                className={`font-semibold text-lg h-full ${buttonVariants({ variant: 'ghost' })}`}>
+                className={`text-lg h-full ${buttonVariants({ variant: 'ghost' })}`}>
                 {router.label}
               </Link>
             ))}

@@ -6,47 +6,45 @@ import React from 'react'
 interface blogProps {
   title: string,
   image: string,
-  url: string,
+  url?: string,
   tag: string[]
 }
 
 const blogList: blogProps[] = [
   {
     title: "Fleetify Dashboard",
-    image: "/blog/img-1.png",
-    url: "/blog/post-1",
-    tag: ["JavaScript", "JQuery", "Bootstrap", "Codeigniter", "Git"]
+    image: "/blog/fleetify_website.png",
+    tag: ["JavaScript", "JQuery", "Bootstrap", "Codeigniter", "Rest API", "Git"]
   },
   {
     title: "Calculator",
-    image: "/blog/img-2.png",
-    url: "/blog/post-2",
+    image: "/blog/calc_app.png",
+    url: "https://egaprasetyo.github.io/Calculator.App/",
     tag: ["HTML", "CSS", "JavaScript"]
   },
   {
     title: "Pokedex",
-    image: "/blog/img-3.jpg",
-    url: "/blog/post-3",
-    tag: ["HTML", "CSS", "JavaScript", "JQuery", "Bootstrap",]
+    image: "/blog/pokedex.png",
+    url: "https://egaprasetyo.github.io/pokedex/",
+    tag: ["HTML", "CSS", "JavaScript", "JQuery", "Rest API", "Bootstrap",]
   },
   {
-    title: "UI/UX",
-    image: "/blog/img-4.png",
-    url: "/blog/post-4",
-    tag: ["UI/UX", "Figma"]
+    title: "Gramedia UI/UX",
+    image: "/blog/gramedia_uiux.png",
+    url: "https://drive.google.com/file/d/1U8WBa_XGcPGNv4ldIq4YylCTRyHeCx9D/view",
+    tag: ["UI/UX Design", "Figma"]
   },
   {
     title: "FMS Dashboard",
-    image: "/blog/img-5.png",
-    url: "/blog/post-5",
-    tag: ["JavaScript", "JQuery", "Bootstrap", "Codeigniter", "Git"]
+    image: "/blog/fms_website.png",
+    tag: ["JavaScript", "JQuery", "Bootstrap", "Codeigniter", "Rest API", "Git"]
   },
   {
     title: "E-Commerce Catalog",
-    image: "/blog/img-6.png",
-    url: "/blog/post-6",
-    tag: ["VueJS", "Figma"]
-  },
+    image: "/blog/ecommerce_catalog.png",
+    url: "https://ecommerce-catalog-chega.netlify.app/",
+    tag: ["VueJS", "Rest API", "Figma"]
+  }
 ]
 
 
@@ -65,7 +63,7 @@ export default function Portfolio() {
             <div key={title} className="relative bg-muted/50 rounded-xl p-3 max-w-md md:break-inside-avoid overflow-hidden">
               <div className="relative z-10 rounded-xl overflow-hidden">
                 <Image src={image} className="w-full h-auto" alt={title} width={300} height={300} />
-                <Link href={url} className="absolute top-0 left-0 w-full h-full transition ease-in-out delay-150 duration-200 bg-transparent hover:bg-foreground/35"></Link>
+                {url && <Link href={url} target='_blank' className="absolute top-0 left-0 w-full h-full transition ease-in-out delay-150 duration-200 bg-transparent hover:bg-foreground/35"></Link>}
               </div>
               <div className="pt-5 px-3 pb-3 flex items-center">
                 <div>
@@ -78,21 +76,22 @@ export default function Portfolio() {
                     }
                   </div>
                 </div>
-                <div className='ml-auto'>
-                  <div className="w-11 h-11 leading-10 text-center bg-muted rounded-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-primary duration-300">
-                    <Link href={url} className="flex justify-center items-center h-full">
-                      <ArrowTopRightIcon className="w-6 h-6" />
-                    </Link>
-                  </div>
-                </div>
+                {url &&
+                  <div className='ml-auto'>
+                    <div className="w-11 h-11 leading-10 text-center bg-muted rounded-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-primary duration-300">
+                      <Link href={url} target="_blank" className="flex justify-center items-center h-full">
+                        <ArrowTopRightIcon className="w-6 h-6" />
+                      </Link>
+                    </div>
+                  </div>}
               </div>
             </div>
           ))
         }
       </div>
-      <div className="py-10 text-center">
+      {/* <div className="py-10 text-center">
         <Link href="/blog" className="inline-block px-6 py-2 border border-gray-300/15 rounded-full transition ease-in-out delay-150 duration-200 bg-transparent hover:-translate-y-1 hover:scale-110 hover:bg-primary">Load more <ArrowRightIcon className="inline h-4 w-4" /></Link>
-      </div>
+      </div> */}
 
     </section>
   )
