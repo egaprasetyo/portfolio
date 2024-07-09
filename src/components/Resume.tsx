@@ -22,19 +22,19 @@ interface CertificateProps {
 
 const resumeList: ResumeProps[] = [
   {
-    year: "04/2022 - Present",
+    year: "Apr 2022 - Jun 2024",
     role: "Frontend Developer",
     company: "Fleetify.id",
   },
   {
-    year: "03/2020 - 05/2020",
+    year: "Mar 2020 - May 2020",
     role: "Frontend Developer - Internship",
     company: "PT. Yoofix Digital Indonesia",
   },
   {
-    year: "2016 - 2021",
+    year: "Aug 2016 - Jan 2021",
     role: "University of Sanata Dharma",
-    company: "Bachelor of Computer Science",
+    company: "Bachelor of Informatics",
   }
 ]
 

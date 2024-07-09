@@ -36,7 +36,7 @@ export default function Hero() {
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
           <Link
-            href="Christianto Ega Prasetyo - Frontend Developer - Resume.pdf"
+            href="CV - Christianto Ega Prasetyo - Frontend Developer.pdf"
             target="_blank"
             download
             className={`w-full h-14 md:w-1/3 ${buttonVariants({
@@ -59,7 +59,7 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <Image src="/me_crop.png" className="relative align-middle grayscale brightness-110 z-10" alt="hero" width={400} height={400} />
+      <Image src="/me_crop.png" className="relative align-middle grayscale brightness-110 z-10" alt="hero" width={400} height={400} priority />
       <div className="shadow"></div>
     </section>
   )

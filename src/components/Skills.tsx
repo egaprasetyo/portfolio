@@ -84,14 +84,14 @@ export default function Skills() {
       </h3> */}
       <div className="flex flex-wrap justify-center items-center gap-5">
         {skillsList.map(({ title, description, icon }: skillsProps) => (
-          <div key={title} className="max-w-[160px] md:max-w-[180px] w-full text-center">
+          <div key={title} className="max-w-[140px] md:max-w-[180px] w-full text-center">
             <div className="rounded-lg pt-10 px-4 pb-8 bg-muted/50 border mb-4">
               <div className="max-w-[60px] w-full mx-auto mt-0 mb-8">
                 {icon}
               </div>
-              <div className="text-muted-foreground text-lg font-bold font-plus-jakarta-sans">{description}</div>
+              <div className="text-muted-foreground text-sm md:text-base font-bold font-plus-jakarta-sans">{description}</div>
             </div>
-            <p>{title}</p>
+            <p className='text-sm md:text-base'>{title}</p>
           </div>
         ))}
       </div>

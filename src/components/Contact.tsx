@@ -22,7 +22,7 @@ export default function Contact() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Email me</p>
-              <h3 className="text-lg font-bold font-plus-jakarta-sans">christianto.ega@gmail.com</h3>
+              <h3 className="text-sm md:text-lg font-bold font-plus-jakarta-sans">christianto.ega@gmail.com</h3>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -31,7 +31,7 @@ export default function Contact() {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Whatsapp me</p>
-              <Link href="https://wa.me/6282158440530" target='_blank' className="text-lg font-bold font-plus-jakarta-sans underline">
+              <Link href="https://wa.me/6282158440530" target='_blank' className="text-sm md:text-lg font-bold font-plus-jakarta-sans underline">
                 082158440530
               </Link>
             </div>
